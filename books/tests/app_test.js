@@ -1,5 +1,4 @@
-const chai = require('chai');
-const chaiHTTP = require('chai-http');
+const chai = require('chai'); const chaiHTTP = require('chai-http');
 const server = require('../server');
 
 const { expect } = chai;
@@ -34,7 +33,7 @@ describe('Books App routes test', () => {
       .get('/authors')
       .end((err, res) => {
         expect(res).to.have.status(200);
-        expect(res.text).to.include('James_Joyce');
+        expect(res.text).to.include('James Joyce');
         done();
       });
   });
